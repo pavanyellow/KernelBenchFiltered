@@ -1,5 +1,9 @@
 # level 1 index 15 agent name: KernelAgent 4o speedup: 1.16x
 
+import time
+
+start_time = time.time()
+
 import torch
 import torch.nn as nn
 
@@ -36,3 +40,6 @@ def get_inputs():
 
 def get_init_inputs():
     return []  # No special initialization inputs needed
+
+end_time = time.time()
+print(f"Time taken: {end_time - start_time} seconds")
